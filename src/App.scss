@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+.app {
+  background-image: url("./assets/img/landing-bg.jpg");
+  background-size: cover;
+  font-family: 'proxima-nova';
+  height: 100vh;
+  width: 100vw;
 }
 
 .logo {
-  height: 40vmin;
+  height: 24px;
   pointer-events: none;
-
-  @media (prefers-reduced-motion: no-preference) {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.navigation {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  background-color: transparent;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 5.6rem;
+  padding: 4.8rem 12%;
 
-.App-link {
-  color: #61dafb;
-}
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    width: 20rem;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    &_item {
+      color: black;
+    }
   }
+}
 
-  to {
-    transform: rotate(360deg);
+.projects {
+  color: white;
+  display: grid;
+  gap: 5.6rem;
+  grid-template-areas:
+    "main ..."
+    "main ...";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  padding: 0 12%;
+  height: 75vh;
+
+  &__main {
+    background: #4A7DFF;
+    grid-area: main;
+    mix-blend-mode: multiply;
+    padding: 2.4rem 2.4rem;
+    display: flex;
+    align-items: center;
+
+    &_title {
+      margin-bottom: .8rem;
+    }
   }
 }
