@@ -1,6 +1,8 @@
 import React from "react";
-import Thumbnail from "./Thumbnail.js"; // Import the Thumbnail component
-import "./App.scss";
+import Thumbnail from "../Thumbnail.js"; // Import the Thumbnail component
+import tntColor from "../assets/img/tnt-ds-colors.png";
+import "../App.scss";
+import "../scss/components/projects.scss";
 
 function Projects(props) {
   return (
@@ -13,29 +15,28 @@ function Projects(props) {
           </div>
           <p>
             I’m a design professional dedicated to creating accessible products
-            that can scale with the needs of business and humans alike. Other
-            than that, I don’t take things too seriously.
+            that can scale with the needs of business and humans alike.
           </p>
         </div>
       </div>
       <div>
         <Thumbnail
-          link="/twitter"
-          image="https://twitter-image-url.jpg"
-          title="Twitter Newsfeed"
-          category="Mobile App"
+          link="/tnt-design-system"
+          image={tntColor}
+          title="TNT DESIGN SYSTEM"
+          category="Design Systems"
         />
 
         <Thumbnail
           link="/airbnb"
-          image="https://airbnb-image-url.jpg>"
+          image=""
           title="Airbnb Experiences"
           category="Website"
         />
 
         <Thumbnail
           link="/photoshop"
-          image="https://photoshop-image-url.jpg"
+          image=""
           title="Photoshop Redesign"
           category="Desktop App"
         />
@@ -43,5 +44,6 @@ function Projects(props) {
     </div>
   );
 }
+console.log('projects' + tntColor)
 
 export default Projects;

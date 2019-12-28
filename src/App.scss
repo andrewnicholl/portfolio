@@ -32,29 +32,3 @@
     }
   }
 }
-
-.projects {
-  color: white;
-  display: grid;
-  gap: 5.6rem;
-  grid-template-areas:
-    "main ..."
-    "main ...";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 1fr;
-  padding: 0 12%;
-  height: 75vh;
-
-  &__main {
-    background: #4A7DFF;
-    grid-area: main;
-    mix-blend-mode: multiply;
-    padding: 2.4rem 2.4rem;
-    display: flex;
-    align-items: center;
-
-    &_title {
-      margin-bottom: .8rem;
-    }
-  }
-}
