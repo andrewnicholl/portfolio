@@ -3,20 +3,20 @@ import { Link } from "react-router-dom"; // Import the Link component
 import "../App.scss";
 import "../scss/components/thumbnail.scss";
 
-
 function Thumbnail(props) {
   return (
-    <div className="project">
-      <Link to="{props.link}">
-        <div>
-          <img src={props.image} alt="Project Image"  className="project__image"/>
+    <Link to="{props.link}">
+      <div
+        className="project"
+        style={{ backgroundImage: `url(${props.image}` }}
+      >
+        <div className="project__text">
+          <div className="project__text_title">{props.title}</div>
+          <div className="project__text_category">{props.category}</div>
         </div>
-        <div className="project__title">{props.title}</div>
-        <div className="project__category">{props.category}</div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
 
-// console.log('thumbnail' + tntColor)
 export default Thumbnail;

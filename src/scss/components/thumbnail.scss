@@ -1,11 +1,21 @@
 .project {
+    width: 100%;
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
 
-    &__image {
-        max-width: 500px;
-        width: 100%;
+    &:hover>.project__text {
+        opacity: 1;
+        transition: all 250ms;
     }
 
-    &__title {}
+    &__text {
+        opacity: 0;
+        transition: all 250ms;
 
-    &__category {}
+        &_title {}
+
+        &_category {}
+    }
+
 }
