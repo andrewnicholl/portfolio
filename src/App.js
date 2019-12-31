@@ -7,17 +7,24 @@ import "./App.scss";
 import "./scss/components/_navigation.scss";
 
 function App() {
+  
   return (
     <BrowserRouter>
       <div className="app">
         <div className="navigation">
           {/* <img src={logo} className="logo" alt="Logo Image" /> */}
-          <Link to="/" className="navigation__links_item">
+          <Link to="/" className="navigation__home">
             andrew nicholl
-            <div className="navigation__links_item_hidden">
+            <div className="navigation__home_hidden">
               <p>back to home</p>
             </div>
           </Link>
+
+          <button className="navigation__hamburger">
+            <div className="navigation__hamburger_lines navigation__hamburger_lines_1"></div>
+            <div className="navigation__hamburger_lines navigation__hamburger_lines_2"></div>
+          </button>
+
           <div className="navigation__links">
             <Link to="/" className="navigation__links_item">
               work
@@ -33,6 +40,7 @@ function App() {
             </Link>
           </div>
         </div>
+
         <Route exact path="/" component={Projects} />
         <Route path="/articles" component={Articles} />
         <Route path="/about" component={About} />

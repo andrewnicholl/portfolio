@@ -1,8 +1,9 @@
 .app {
   background-image: url("./assets/img/landing-bg.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .logo {

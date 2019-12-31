@@ -8,37 +8,74 @@
     flex-direction: row;
     justify-content: space-between;
     min-height: 5.6rem;
-    padding: 4.8rem 8%;
+    padding: 3.2rem 8%;
 
-    &__links {
-        display: flex;
-        justify-content: space-between;
-        width: 20rem;
+    @media screen and (min-width: $large) {
+        padding: 4.8rem 8%;
+    }
 
-        &_item {
-            color: black;
+    &__home {
+        color: black;
 
-            &:hover>.navigation__links_item_underline {
-                width: 100%;
-            }
+        &:hover>.navigation__home_hidden {
+            opacity: 1;
+            padding-left: 0.6rem;
+        }
 
-            &:hover>.navigation__links_item_hidden {
-                opacity: 1;
-                padding-left: 0.6rem;
-            }
+        &_hidden {
+            display: none;
 
-            &_underline {
-                background-color: $color-primary;
-                height: 0.1rem;
-                transition: all 250ms ease-in-out;
-                width: 0;
-            }
-
-            &_hidden {
+            @media screen and (min-width: $large) {
                 color: $color-primary;
                 display: inline-block;
                 opacity: 0;
                 transition: all 250ms ease-in-out;
+            }
+        }
+    }
+
+    &__hamburger {
+        width: 24px;
+
+        &_lines {
+            height: 0.2rem;
+            width: 100%;
+            background-color: black;
+
+            &_1 {
+                margin-bottom: 4px;
+            }
+
+            &_2 {}
+        }
+
+        @media screen and (min-width: $large) {
+            display: none;
+        }
+    }
+
+    &__links {
+        display: none;
+
+        @media screen and (min-width: $large) {
+
+            display: flex;
+            justify-content: space-between;
+            width: 20rem;
+
+            &_item {
+                color: black;
+
+                &:hover>.navigation__links_item_underline {
+                    width: 100%;
+                }
+
+                &_underline {
+                    background-color: $color-primary;
+                    height: 0.1rem;
+                    transition: all 250ms ease-in-out;
+                    width: 0;
+                }
             }
         }
     }

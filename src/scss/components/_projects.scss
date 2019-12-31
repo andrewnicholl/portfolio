@@ -4,12 +4,22 @@
     color: white;
     display: grid;
     gap: 3.2rem;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
-        "hero work";
-    grid-template-columns: 1.45fr 2fr;
-    grid-template-rows: 1fr;
-    padding: 0 8%;
-    height: 75vh;
+        "hero"
+        "work";
+    padding: 0 5%;
+
+    @media screen and (min-width: $large) {
+        gap: 3.2rem;
+        grid-template-areas:
+            "hero work";
+        grid-template-columns: 1.45fr 2fr;
+        grid-template-rows: 1fr;
+        padding: 0 8%;
+        height: 75vh;
+    }
 }
 
 .hero {
@@ -19,10 +29,15 @@
     border-radius: .2rem;
     display: flex;
     grid-area: hero;
+    height: calc(97vh - 8.4rem);
     mix-blend-mode: multiply;
     padding: 2.4rem 2.4rem;
     transition: all 275ms ease-out;
 
+    @media screen and (min-width: $large) {
+        height: unset;
+
+    }
 
     &:hover {
         background: darken($color-primary, 5%);
@@ -32,28 +47,5 @@
 
     &__title {
         margin-bottom: .8rem;
-    }
-}
-
-.work {
-    display: grid;
-    gap: 3.2rem;
-    grid-area: work;
-    grid-template-areas:
-        "main main"
-        "second third";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1.325fr;
-
-    &__main {
-        grid-area: main;
-    }
-
-    &__second {
-        grid-area: second;
-    }
-
-    &__third {
-        grid-area: third;
     }
 }
