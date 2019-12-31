@@ -12,16 +12,24 @@ function App() {
       <div className="app">
         <div className="navigation">
           {/* <img src={logo} className="logo" alt="Logo Image" /> */}
-          <p>andrew nicholl</p>
+          <Link to="/" className="navigation__links_item">
+            andrew nicholl
+            <div className="navigation__links_item_hidden">
+              <p>back to home</p>
+            </div>
+          </Link>
           <div className="navigation__links">
             <Link to="/" className="navigation__links_item">
               work
+              <div className="navigation__links_item_underline"></div>
             </Link>
             <Link to="/articles" className="navigation__links_item">
               about
+              <div className="navigation__links_item_underline"></div>
             </Link>
             <Link to="/about" className="navigation__links_item">
               contact
+              <div className="navigation__links_item_underline"></div>
             </Link>
           </div>
         </div>

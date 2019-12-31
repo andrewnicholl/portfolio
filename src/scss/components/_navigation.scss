@@ -1,3 +1,5 @@
+@import '../../scss/abstracts/variables';
+
 .navigation {
     align-items: center;
     background-color: transparent;
@@ -15,6 +17,29 @@
 
         &_item {
             color: black;
+
+            &:hover>.navigation__links_item_underline {
+                width: 100%;
+            }
+
+            &:hover>.navigation__links_item_hidden {
+                opacity: 1;
+                padding-left: 0.6rem;
+            }
+
+            &_underline {
+                background-color: $color-primary;
+                height: 0.1rem;
+                transition: all 250ms ease-in-out;
+                width: 0;
+            }
+
+            &_hidden {
+                color: $color-primary;
+                display: inline-block;
+                opacity: 0;
+                transition: all 250ms ease-in-out;
+            }
         }
     }
 }
