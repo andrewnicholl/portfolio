@@ -1,0 +1,20 @@
+.navigation {
+    align-items: center;
+    background-color: transparent;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 5.6rem;
+    padding: 4.8rem 8%;
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        width: 20rem;
+
+        &_item {
+            color: black;
+        }
+    }
+}

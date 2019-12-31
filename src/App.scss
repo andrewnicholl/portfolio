@@ -1,7 +1,6 @@
 .app {
   background-image: url("./assets/img/landing-bg.jpg");
   background-size: cover;
-  font-family: 'proxima-nova';
   height: 100vh;
   width: 100vw;
 }
@@ -9,26 +8,4 @@
 .logo {
   height: 24px;
   pointer-events: none;
-}
-
-
-.navigation {
-  align-items: center;
-  background-color: transparent;
-  color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  min-height: 5.6rem;
-  padding: 4.8rem 12%;
-
-  &__links {
-    display: flex;
-    justify-content: space-between;
-    width: 20rem;
-
-    &_item {
-      color: black;
-    }
-  }
 }

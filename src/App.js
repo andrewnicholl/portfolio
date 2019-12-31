@@ -4,6 +4,7 @@ import Projects from "./components/Projects.js";
 import Articles from "./components/Articles.js";
 import About from "./components/About.js";
 import "./App.scss";
+import "./scss/components/_navigation.scss";
 
 function App() {
   return (
