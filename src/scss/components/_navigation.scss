@@ -2,7 +2,7 @@
 
 .navigation {
     align-items: center;
-    background-color: transparent;
+    background-color: white;
     color: black;
     display: flex;
     flex-direction: row;
@@ -13,7 +13,7 @@
     top: 0;
     z-index: 1000;
 
-    @media screen and (min-width: $large) {
+    @media screen and (min-width: $large) and (orientation: landscape) {
         padding: 4.8rem 8%;
     }
 
@@ -28,7 +28,7 @@
         &_hidden {
             display: none;
 
-            @media screen and (min-width: $large) {
+            @media screen and (min-width: $large) and (orientation: landscape) {
                 color: $color-primary;
                 display: inline-block;
                 opacity: 0;
@@ -54,7 +54,7 @@
             &_2 {}
         }
 
-        @media screen and (min-width: $large) {
+        @media screen and (min-width: $large) and (orientation: landscape) {
             display: none;
         }
     }
@@ -62,8 +62,7 @@
     &__links {
         display: none;
 
-        @media screen and (min-width: $large) {
-
+        @media screen and (min-width: $large) and (orientation: landscape) {
             display: flex;
             justify-content: space-between;
             width: 20rem;
