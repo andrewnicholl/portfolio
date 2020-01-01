@@ -8,7 +8,10 @@
     flex-direction: row;
     justify-content: space-between;
     min-height: 5.6rem;
-    padding: 3.2rem 8%;
+    padding: 3.2rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
     @media screen and (min-width: $large) {
         padding: 4.8rem 8%;
@@ -35,7 +38,9 @@
     }
 
     &__hamburger {
+        border: none;
         width: 24px;
+        background-color: transparent;
 
         &_lines {
             height: 0.2rem;
