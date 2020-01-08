@@ -1,4 +1,11 @@
 .app {
+  background-image:
+    linear-gradient(to bottom, rgba(white, 1), rgba(white, 0), rgba(white, 0), rgba(white, 1)),
+    url("./assets/img/landing-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
 }
 
 .logo {

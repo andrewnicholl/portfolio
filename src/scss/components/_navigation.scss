@@ -17,45 +17,46 @@
         padding: 4.8rem 8%;
     }
 
-    &__home {
+    &__name {
         color: black;
 
-        &:hover>.navigation__home_hidden {
+        &:hover>.navigation__home {
             opacity: 1;
             padding-left: 0.6rem;
         }
 
-        &_hidden {
-            display: none;
+    }
 
-            @media screen and (min-width: $large) and (orientation: landscape) {
-                color: $color-primary;
-                display: inline-block;
-                opacity: 0;
-                transition: all 250ms ease-in-out;
-            }
+    &__home {
+        display: none;
+
+        @media screen and (min-width: $large) and (orientation: landscape) {
+            color: $color-primary;
+            display: inline-block;
+            opacity: 0;
+            transition: all 250ms ease-in-out;
         }
     }
 
     &__hamburger {
-        border: none;
-        width: 24px;
         background-color: transparent;
+        border: none;
+        cursor: pointer;
+        width: 24px;
 
-        &_lines {
-            height: 0.2rem;
-            width: 100%;
-            background-color: black;
-
-            &_1 {
-                margin-bottom: 4px;
-            }
-
-            &_2 {}
-        }
 
         @media screen and (min-width: $large) and (orientation: landscape) {
             display: none;
+        }
+    }
+
+    &__lines {
+        height: 0.2rem;
+        width: 100%;
+        background-color: black;
+
+        &--margin {
+            margin-bottom: 4px;
         }
     }
 
@@ -67,20 +68,22 @@
             justify-content: space-between;
             width: 20rem;
 
-            &_item {
-                color: black;
-
-                &:hover>.navigation__links_item_underline {
-                    width: 100%;
-                }
-
-                &_underline {
-                    background-color: $color-primary;
-                    height: 0.1rem;
-                    transition: all 250ms ease-in-out;
-                    width: 0;
-                }
-            }
         }
+    }
+
+    &__item {
+        color: black;
+
+        &:hover>.navigation__underline {
+            width: 100%;
+        }
+
+    }
+
+    &__underline {
+        background-color: $color-primary;
+        height: 0.1rem;
+        transition: all 250ms ease-in-out;
+        width: 0;
     }
 }
