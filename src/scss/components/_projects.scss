@@ -1,12 +1,7 @@
 @import '../../scss/abstracts/variables';
 
 
-.projects-container {
-    // background-image:
-    //     linear-gradient(to bottom, rgba(white, 1), rgba(white, 0), rgba(white, 0), rgba(white, 1)),
-    //     url("../../assets/img/landing-bg.jpg");
-    // background-repeat: no-repeat;
-    // background-size: cover;
+.projects {
     color: white;
     display: grid;
     gap: 3.2rem;
@@ -17,30 +12,25 @@
         "third";
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    min-height: 100vh;
-    padding: 0 5% 5%;
+    min-height: 100%;
 
     @media screen and (min-width: $large) and (orientation: landscape) {
-        padding: 0 8%;
-        width: 100%;
         grid-template-areas:
-            "main main"
-            "second third";
+            "main second"
+            "main third";
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        height: 75vh;
     }
-}
 
-.main {
-    grid-area: main;
-    height: 85vh;
-}
+    &__main {
+        grid-area: main;
+    }
 
-.second {
-    grid-area: second;
-}
+    &__second {
+        grid-area: second;
+    }
 
-.third {
-    grid-area: third;
+    &__third {
+        grid-area: third;
+    }
 }

@@ -1,27 +1,5 @@
 @import '../../scss/abstracts/variables';
 @import '../../scss/base/animations';
-.hero-container {
-    // background-image:
-    //     linear-gradient(to bottom, rgba(white, 1), rgba(white, 0), rgba(white, 0), rgba(white, 1)),
-    //     url("../../assets/img/landing-bg.jpg");
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    color: white;
-    display: grid;
-    gap: 3.2rem;
-    grid-template-areas:
-        "hero";
-    grid-template-columns: 1;
-    padding: 0 5% 5%;
-    height: 85vh;
-
-
-    @media screen and (min-width: $large) and (orientation: landscape) {
-        gap: 3.2rem;
-        padding: 0 8%;
-        width: 100%;
-    }
-}
 
 .hero {
     align-items: center;
@@ -31,41 +9,32 @@
     box-shadow: 0px 6px 8px rgba(37, 40, 47, 0.22);
     display: flex;
     flex-direction: column;
-    grid-area: hero;
-    height: calc(97vh - 8.4rem);
+    grid-area: component;
+    height: 100%;
     justify-content: space-between;
     mix-blend-mode: multiply;
-    padding: 34% 5%;
+    padding: 20vw 4%;
     text-align: center;
     transition: all 275ms ease-out;
 
-    @media screen and (min-width: $small) {
-        padding: 26% 0;
-    }
-
     @media screen and (min-width: $medium) {
-        padding: 20% 0;
+        padding: 18vh 0;
     }
-
+   
     @media screen and (min-width: $large) {
-        height: calc(97vh - 10.8rem);
-    }
-
-    @media screen and (min-width: $large) and (orientation: landscape) {
- 
-        height: 85vh;
-        padding: 2.4rem 2.4rem;
+        padding: 14vh 0;
     }
 
     &:hover {
         background: darken($color-primary, 5%);
-        box-shadow: 0px 6px 8px rgba(37, 40, 47, 0.22);
+        box-shadow: 0px 6px 8px rgba(37, 40, 47, 0.4);
         transform: translateY(-2px);
     }
 
     &__text {
         @media screen and (min-width: $small) {
-            width: 44rem;
+            min-width: 44rem;
+            max-width: 64rem;
         }
 
     }

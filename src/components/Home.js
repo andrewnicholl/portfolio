@@ -5,12 +5,12 @@ import "../scss/components/_home.scss";
 
 function Home(props) {
   return (
-    <div className="hero-container">
+    <div className="component-container">
       <div className="hero">
         <div className="hero__text">
           <h1 className="hero__title">Product Designer,</h1>
           <p className="hero__subtitle">amongst other things.</p>
-          <p className="paragraph">
+          <p className="hero__body paragraph">
             I’m a design professional dedicated to creating accessible products
             that can scale with the needs of business and humans alike.
           </p>

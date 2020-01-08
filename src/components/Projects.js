@@ -8,9 +8,9 @@ import "../scss/components/_projects.scss";
 
 function Thumbs(props) {
   return (
-    <div className="projects-container">
-      {/* <div className="thumbs"> */}
-        <div className="main">
+    <div className="component-container">
+      <div className="projects">
+        <div className="projects__main">
           <Thumbnail
             link="/callbot"
             image={callbotThumb}
@@ -18,7 +18,7 @@ function Thumbs(props) {
             category="Data Visualization"
           />
         </div>
-        <div className="second">
+        <div className="projects__second">
           <Thumbnail
             link="/tnt-design-system"
             image={tntColor}
@@ -26,7 +26,7 @@ function Thumbs(props) {
             category="Design Infrastructure"
           />
         </div>
-        <div className="third">
+        <div className="projects__third">
           <Thumbnail
             link="/da-vinci"
             image={davinciThumb}
@@ -34,7 +34,7 @@ function Thumbs(props) {
             category="Web Application"
           />
         </div>
-      {/* </div> */}
+      </div>
     </div>
   );
 }
