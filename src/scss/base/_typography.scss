@@ -1,4 +1,10 @@
 @import './scss/abstracts/variables';
+@import './scss/abstracts/mixins';
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; // 1em = 10px
+}
 
 body {
   -moz-osx-font-smoothing: grayscale;
@@ -12,14 +18,14 @@ body {
 }
 
 .heading--large {
-  font-size: 2.8rem;
+  font-size: $size-400;
 
-  @media screen and (min-width: $medium) {
+  @include respond-to(medium) {
     font-size: 3.4rem;
   }
 
-  @media screen and (min-width: $xx-large) {
-    font-size: 4.4rem;
+  @include respond-to(xx-large) {
+    font-size: $size-500;
   }
 }
 

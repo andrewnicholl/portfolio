@@ -1,0 +1,127 @@
+@import '../abstracts/variables';
+
+// RESPONSIVENESS
+// Wrap the respond-to mixin in the orientation mixin to apply only to screens of particular orientation (i.e. landscape to apply only on desktop devices)
+// Inserts a media query based on $breakpoints map in variables scss file
+@mixin respond-to($name) {
+
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+    +"Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+// Inserts a media query based on $orientation map in variables
+@mixin orientation($name) {
+
+  // If the key exists in the map
+  @if map-has-key($orientation, $name) {
+
+    // Prints a media query based on the value
+    @media #{inspect(map-get($orientation, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$orientation}`. "
+    +"Please make sure it is defined in `$orientation` map.";
+  }
+}
+
+// FLEX
+// This covers all of our most used flex properties
+// $direction, $justify, and $align are required
+@mixin flex($direction, $justify, $align, $wrap: nowrap) {
+  // Sets display to flex
+  display: -webkit-box; // old
+  display: -moz-box; // old
+  display: -ms-flexbox; // ie
+  display: -webkit-flex; // new
+  display: flex; // new
+
+  // required flex-direction property is set here
+  @if $direction==column {
+    -webkit-flex-direction: vertical;
+    -moz-flex-direction: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  @else {
+    -webkit-flex-direction: horizontal;
+    -moz-flex-direction: horizontal;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+
+  // required justify-content property is set here
+  @if $justify==flex-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+  }
+
+  @else if $justify==flex-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+  }
+
+  @else if $justify==space-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+  }
+
+  @else {
+    -webkit-box-pack: $justify;
+    -ms-flex-pack: $justify;
+  }
+
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  justify-content: $justify;
+
+
+  // required align-item property is set here
+  @if $align==flex-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+  }
+
+  @else if $align==flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+  }
+
+  @else {
+    -webkit-box-align: $align;
+    -ms-flex-align: $align;
+  }
+
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  align-items: $align;
+
+  // Optional flex-wrap property is assigned here, no-wrap by default
+	-webkit-flex-wrap: $wrap;
+	-moz-flex-wrap: $wrap;
+	@if $wrap == nowrap {
+		-ms-flex-wrap: none;
+	} @else {
+		-ms-flex-wrap: $wrap;
+	}
+  flex-wrap: $wrap;
+  // All other flex properties must be set in class
+}

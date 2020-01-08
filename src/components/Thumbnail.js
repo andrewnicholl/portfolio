@@ -1,7 +1,7 @@
-import React from "react"; // Import the Component component from React
-import { Link } from "react-router-dom"; // Import the Link component
-import "../App.scss";
-import "../scss/components/_thumbnail.scss";
+import React from 'react'; // Import the Component component from React
+import { Link } from 'react-router-dom'; // Import the Link component
+import '../App.scss';
+import '../scss/components/_thumbnail.scss';
 
 function Thumbnail(props) {
   return (
@@ -17,7 +17,6 @@ function Thumbnail(props) {
           className="project__image"
           style={{ backgroundImage: `url(${props.image}` }}
         ></div>
-
       </div>
     </Link>
   );
