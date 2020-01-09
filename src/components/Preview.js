@@ -4,20 +4,20 @@ import '../scss/components/_preview.scss';
 
 function Preview(props) {
   return (
-    <div className="preview-container">
+    <div className="preview-container preview-container__callbot">
       <div className="preview">
-        <h1>{props.title}</h1>
-        <p>{props.subtitle}</p>
-        <p>{props.description}</p>
+        <h1 className="heading--large">{props.title}</h1>
+        <p className="heading--large">{props.subtitle}</p>
+        <p className="paragraph">{props.description}</p>
       </div>
-      <img src={props.image} alt={props.alt} className="preview__image"/>
+      <img src={props.image} alt={props.alt} className="preview__image" />
       <div>
-        <Link to="/projects" className="hero__link">
+        <Link to="/projects" className="button">
           <p className="paragraph">{props.btnText}</p>
-          <div className="hero__arrow">
-            <div className="hero__line1"></div>
-            <div className="hero__line2"></div>
-            <div className="hero__line3"></div>
+          <div className="button__arrow">
+            <div className="button__line1"></div>
+            <div className="button__line2"></div>
+            <div className="button__line3"></div>
           </div>
         </Link>
       </div>

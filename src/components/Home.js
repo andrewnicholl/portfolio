@@ -15,12 +15,12 @@ function Home(props) {
             that can scale with the needs of business and humans alike.
           </p>
         </div>
-        <Link to="/projects" className="hero__link">
+        <Link to="/projects" className="button">
           <p className="paragraph">see projects</p>
-          <div className="hero__arrow">
-            <div className="hero__line1"></div>
-            <div className="hero__line2"></div>
-            <div className="hero__line3"></div>
+          <div className="button__arrow">
+            <div className="button__line1"></div>
+            <div className="button__line2"></div>
+            <div className="button__line3"></div>
           </div>
         </Link>
       </div>
