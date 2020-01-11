@@ -8,7 +8,6 @@ import "./App.scss";
 import "./scss/components/_navigation.scss";
 
 function App() {
-  
   return (
     <BrowserRouter>
       <div className="app">
@@ -41,10 +40,11 @@ function App() {
             </Link>
           </div>
         </div>
-        <Route exact path="/" component={Home} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
+
+            <Route exact path="/" component={Home} />
+            {/* <Route path="/projects" component={Projects} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} /> */}
       </div>
     </BrowserRouter>
   );

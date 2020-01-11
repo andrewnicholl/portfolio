@@ -1,22 +1,29 @@
 @import './scss/abstracts/variables';
-
-.app {
+.experiment {
   background-attachment: fixed;
   background-image:
-    linear-gradient(to bottom, rgba(white, 1), rgba(white, 0), rgba(white, 0), rgba(white, 1)),
-    url("./assets/img/landing-bg.jpg");
+  linear-gradient(to bottom, rgba(white, 1), rgba(white, 0), rgba(white, 0), rgba(white, 1)),
+  url("./assets/img/landing-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  width: 500%;
+
+  &__child {
+    width: 20%;
+  }
+}
+
+.app {
   height: 100vh;
 }
 
 .component-container {
   color: white;
   padding: 0 5% 4%;
-  height: calc(100% - 8.4rem);
+  height: 100vh;
+  padding-top: 85px;
 }
-
-
 
 .button {
   align-items: center;
