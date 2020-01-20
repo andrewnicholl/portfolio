@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Preview from "./Preview.js";
 import callbotThumb from "../assets/img/callbot-blue.png";
-import Pdf from '../assets/andrewnicholl_portfolio.pdf';
-import { Document } from 'react-pdf'
+// import Pdf from '../andrewnicholl_portfolio.pdf';
 import "../App.scss";
 import "../scss/components/_home.scss";
 
@@ -16,20 +15,24 @@ function Home(props) {
             <div className="hero__text">
               <h1 className="hero__title">Product Designer,</h1>
               <p className="hero__subtitle">amongst other things.</p>
-              <p className="hero__body paragraph">
+              {/* <p className="hero__body paragraph">
                 I’m a design professional dedicated to creating accessible
                 products that can scale with the needs of business and humans
                 alike.
+              </p> */}
+              <p className="hero__body paragraph">
+                I’m in the process of rebuilding my website. In the meantime, check out my portfolio on LinkedIn.
               </p>
             </div>
-            <Link to="/projects" className="button">
+            {/* <a href="%PUBLIC_URL%/andrewnicholl_portfolio.pdf" target="_blank" className="button" download> */}
+            <a href='https://www.slideshare.net/slideshow/embed_code/key/xaMPYqgKlH69KC' target="_blank" className="button">
               <p className="paragraph">see portfolio</p>
               <div className="button__arrow">
                 <div className="button__line1"></div>
                 <div className="button__line2"></div>
                 <div className="button__line3"></div>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
