@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Preview from "./Preview.js";
 import callbotThumb from "../assets/img/callbot-blue.png";
 import Pdf from '../assets/andrewnicholl_portfolio.pdf';
+import { Document } from 'react-pdf'
 import "../App.scss";
 import "../scss/components/_home.scss";
 
@@ -21,14 +22,14 @@ function Home(props) {
                 alike.
               </p>
             </div>
-            <a href = {Pdf} target = "_blank" className="button">
+            <Link to="/projects" className="button">
               <p className="paragraph">see portfolio</p>
               <div className="button__arrow">
                 <div className="button__line1"></div>
                 <div className="button__line2"></div>
                 <div className="button__line3"></div>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
