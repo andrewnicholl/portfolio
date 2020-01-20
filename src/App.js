@@ -11,8 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app">
-        <div className="navigation">
-          {/* <img src={logo} className="logo" alt="Logo Image" /> */}
+        {/* <div className="navigation">
           <Link to="/" className="navigation__name">
             andrew nicholl
             <div className="navigation__home">
@@ -39,7 +38,7 @@ function App() {
               <div className="navigation__underline"></div>
             </Link>
           </div>
-        </div>
+        </div> */}
 
             <Route exact path="/" component={Home} />
             {/* <Route path="/projects" component={Projects} />
