@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Preview from "./Preview.js";
 import callbotThumb from "../assets/img/callbot-blue.png";
-// import Pdf from '../andrewnicholl_portfolio.pdf';
+import Pdf from '../assets/andrewnicholl_portfolio.pdf';
 import "../App.scss";
 import "../scss/components/_home.scss";
 
@@ -24,8 +24,8 @@ function Home(props) {
                 I’m in the process of rebuilding my website. In the meantime, check out my portfolio on LinkedIn.
               </p>
             </div>
-            {/* <a href="%PUBLIC_URL%/andrewnicholl_portfolio.pdf" target="_blank" className="button" download> */}
-            <a href='https://www.slideshare.net/slideshow/embed_code/key/xaMPYqgKlH69KC' target="_blank" className="button">
+            {/* <a href={Pdf} target="_blank" className="button"> */}
+            <a href='https://nicholldesign.com/static/media/andrewnicholl_portfolio.08d6c54e.pdf' target="_blank" className="button">
               <p className="paragraph">see portfolio</p>
               <div className="button__arrow">
                 <div className="button__line1"></div>
