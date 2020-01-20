@@ -25,7 +25,7 @@ function Home(props) {
               </p>
             </div>
             {/* <a href={Pdf} target="_blank" className="button"> */}
-            <a href='https://nicholldesign.com/static/media/andrewnicholl_portfolio.08d6c54e.pdf' target="_blank" className="button">
+            <a href='http://nicholldesign.com/static/media/andrewnicholl_portfolio.08d6c54e.pdf' target="_blank" className="button">
               <p className="paragraph">see portfolio</p>
               <div className="button__arrow">
                 <div className="button__line1"></div>
