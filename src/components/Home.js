@@ -31,18 +31,6 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <div className="experiment__child">
-        <div className="component-container">
-          <Preview
-            title="Callbot"
-            subtitle="Web Application"
-            description="An interface with personality. Designed to bring life to an existing CLI tool."
-            image={callbotThumb}
-            alt="callbot icon"
-            btnText="view case study"
-          />
-        </div>
-      </div>
     </div>
   );
 }
