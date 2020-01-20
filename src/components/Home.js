@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Preview from "./Preview.js";
 import callbotThumb from "../assets/img/callbot-blue.png";
-import Pdf from '../assets/andrewnicholl_portfolio.pdf';
 import "../App.scss";
 import "../scss/components/_home.scss";
 
@@ -24,8 +23,7 @@ function Home(props) {
                 I’m in the process of rebuilding my website. In the meantime, check out my portfolio on LinkedIn.
               </p>
             </div>
-            {/* <a href={Pdf} target="_blank" className="button"> */}
-            <a href='http://nicholldesign.com/static/media/andrewnicholl_portfolio.08d6c54e.pdf' target="_blank" className="button">
+            <a href="https://www.nicholldesign.com/andrewnicholl_portfolio.pdf" target="_blank" className="button">
               <p className="paragraph">see portfolio</p>
               <div className="button__arrow">
                 <div className="button__line1"></div>
