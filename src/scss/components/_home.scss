@@ -65,3 +65,23 @@
     }
 
 }
+
+.desktop-link {
+    display: none;
+
+    @include orientation(landscape) {
+        @include respond-to(large) {
+            display: flex;
+        }
+    }
+}
+
+.mobile-link {
+    display: flex;
+
+    @include orientation(landscape) {
+        @include respond-to(large) {
+            display: none;
+        }
+    }
+}
