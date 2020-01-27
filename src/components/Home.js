@@ -12,6 +12,10 @@ function Home(props) {
         <div className="component-container">
           <div className="hero">
             <div className="hero__text">
+              <div>
+                <p className="hero__name paragraph">Andrew Nicholl</p>
+                <div className="line"></div>
+              </div>
               <h1 className="hero__title">Product Designer,</h1>
               <p className="hero__subtitle">amongst other things.</p>
               <p className="hero__body paragraph">
@@ -84,7 +88,7 @@ function Home(props) {
                     viewBox="0 0 32 32"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                     className="social__icon"
+                    className="social__icon"
                   >
                     <path
                       fill-rule="evenodd"
