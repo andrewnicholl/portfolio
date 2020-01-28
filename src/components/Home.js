@@ -28,7 +28,19 @@ function Home(props) {
               <a
                 href="https://www.nicholldesign.com/andrewnicholl_portfolio.pdf"
                 target="_blank"
-                className="button"
+                className="button desktop-link"
+              >
+                <p className="paragraph">see portfolio</p>
+                <div className="button__arrow">
+                  <div className="button__line1"></div>
+                  <div className="button__line2"></div>
+                  <div className="button__line3"></div>
+                </div>
+              </a>
+              <a
+                href="https://www.nicholldesign.com/andrewnicholl_portfolio_compressed.pdf"
+                target="_blank"
+                className="button mobile-link"
               >
                 <p className="paragraph">see portfolio</p>
                 <div className="button__arrow">
