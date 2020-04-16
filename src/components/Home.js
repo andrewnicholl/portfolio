@@ -26,7 +26,8 @@ function Home(props) {
             </div>
             <div>
               <a
-                href="https://www.nicholldesign.com/andrewnicholl_portfolio.pdf"
+                // href="https://www.nicholldesign.com/andrewnicholl_portfolio.pdf"
+                href="https://www.dropbox.com/s/44rakq0gn6qp6zs/andrewnicholl.pdf?dl=0"
                 target="_blank"
                 className="button desktop-link"
               >
